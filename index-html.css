@@ -1,19 +1,19 @@
 h1{
-    background: linear-gradient(90deg in oklab,#6067be,#e2dbdb);
-    color:white;
+    background-color: #5d3daf;
+    color:#ffffff;
 }
 
 h2{
-    background-color: #434998;
-    color:#f4f4f4;
+    background: linear-gradient(90deg in oklab,#6067be,#e2dbdb);
+    color:white;
 }
 
 
 
 a:link{
-    color: blueviolet;
+    color: #ff7cd8;
 }
 a:visited{
-    color: #ff6987;
+    color: #fb6542;
 }
 

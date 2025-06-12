@@ -1,0 +1,27 @@
+h1{
+    color: #0f460f;
+    font:
+    italic 2.5rem "Fira Sans",
+    serif;
+    background-color: #f9ffe1;
+
+}
+
+h2{
+    color:#602720;
+    font-family: serif;
+    font-size: 20px
+}
+
+div.ika{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-auto-row: 200px 300px;
+	grid-gap: 10px;
+	
+	width: 1024px;
+}
+
+div.box{
+	background: rgb(253, 160, 149);
+}

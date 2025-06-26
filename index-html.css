@@ -1,5 +1,5 @@
 h1{
-    background-color: #5d3daf;
+    background: linear-gradient(90deg in oklab,#4c178d,#fed3c4);
     color:#ffffff;
 }
 
@@ -11,9 +11,10 @@ h2{
 
 
 a:link{
-    color: #8400ff;
+    color: #6c32ff;
 }
+
 a:visited{
-    color: #fb4242;
+    color: #ff5f5c;
 }
 

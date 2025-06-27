@@ -6,8 +6,7 @@ h1{
 }
 
 h2{
-    color:#602720;
-    font-family: serif;
+    color:#352927;
     font-size: 20px
 }
 
@@ -21,5 +20,5 @@ div.ika{
 }
 
 div.box{
-	background: rgba(255, 162, 152, 0.519);
+	background: #fed3c4;
 }

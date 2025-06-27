@@ -4,7 +4,7 @@ console.log('答え（デバッグ用）: ' + kotae);
 
 // 入力回数（予想回数）
 let kaisu = 0;
-let owattaka = 0;
+let owattaka = 0;       //終わったかどうかカウント
 
 
 // ボタンを押した後の処理をする関数 hantei() の定義
@@ -27,9 +27,9 @@ function hantei() {
 if(yoso === kotae && kaisu <= 3 && owattaka === 0){
     console.log('正解です．おめでとう!');
     z.textContent = '正解です．おめでとう!'
-    owattaka = 1;
-
-}else if(owattaka ===1){
+    owattaka = 1;                   //3回以内に正解したら終わり
+    
+}else if(owattaka === 1){
     console.log('答えは '+kotae+' でした．すでにゲームは終わっています');
     z.textContent = '答えは '+kotae+' でした．すでにゲームは終わっています'
 

@@ -17,6 +17,49 @@ function print(data) {
 // 課題5-1 の関数 printDom() はここに記述すること
 function printDom(data) {
 
+  let div = document.createElement('div');
+  div.setAttribute('id', 'result');
+  let a = document.querySelector('p#ppp');
+  a.insertAdjacentElement('afterend', div);
+
+  let div1 = document.createElement('div');
+  div1.setAttribute('class', 'box');
+  let div2 = document.createElement('div');
+  div2.setAttribute('class', 'box');
+  let div3 = document.createElement('div');
+  div3.setAttribute('class', 'box');
+  let div4 = document.createElement('div');
+  div4.setAttribute('class', 'box');
+  let div5 = document.createElement('div');
+  div5.setAttribute('class', 'box');
+  let div6 = document.createElement('div');
+  div6.setAttribute('class', 'box');
+  let div7 = document.createElement('div');
+  div7.setAttribute('class', 'box');
+  let div8 = document.createElement('div');
+  div8.setAttribute('class', 'box');
+  let div9 = document.createElement('div');
+  div9.setAttribute('class', 'box');
+
+  div1.textContent = '緯度：'+data.coord.lon;
+  div2.textContent = '軽度：'+data.coord.lat;
+  div3.textContent = '天気：'+data.weather[0].description ;
+  div4.textContent = '最低気温：'+data.main.temp_min+'°';
+  div5.textContent = '最高気温：'+data.main.temp_max+'°';
+  div6.textContent = '湿度：'+data.main.humidity+'％';
+  div7.textContent = '風速：'+data.wind.speed;
+  div8.textContent = '風向：'+data.wind.deg;
+  div9.textContent = '都市名：'+data.name;
+
+  div.insertAdjacentElement('beforeend', div1);
+  div.insertAdjacentElement('beforeend', div2);
+  div.insertAdjacentElement('beforeend', div3);
+  div.insertAdjacentElement('beforeend', div4);
+  div.insertAdjacentElement('beforeend', div5);
+  div.insertAdjacentElement('beforeend', div6);
+  div.insertAdjacentElement('beforeend', div7);
+  div.insertAdjacentElement('beforeend', div8);
+  div.insertAdjacentElement('beforeend', div9);
 }
 
 // 課題6-1 のイベントハンドラ登録処理は以下に記述

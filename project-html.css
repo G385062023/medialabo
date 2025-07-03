@@ -1,5 +1,5 @@
 h1{
-    color: #0f460f;
+    color: #230f46;
     font:
     italic 2.5rem "Fira Sans",
     serif;
@@ -10,7 +10,7 @@ h2{
     font-size: 20px
 }
 
-div.ika{
+div#result{
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
 	grid-auto-row: 200px 300px;
@@ -20,5 +20,5 @@ div.ika{
 }
 
 div.box{
-	background: #fed3c4;
+	background: #e8c4fe;
 }

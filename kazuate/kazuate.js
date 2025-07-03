@@ -15,8 +15,8 @@ function hantei() {
   kaisu = kaisu + 1;
   console.log(kaisu+'回目の予想: '+yoso);
 
-  x = document.querySelector('span#kaisu');
-  x.textContent = kaisu; 
+  x = document.querySelector('span#kaisu');     //span要素のkaisuを検索
+  x.textContent = kaisu;                        //で、上で検索したところにkaisuを表示させる
 
   y = document.querySelector('span#answer');
   y.textContent = yoso;

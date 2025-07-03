@@ -16,3 +16,27 @@ let gakka = [
 
 //////////////// ここから下にプログラムを書きたそう!
 
+
+function show(){
+	
+let p = document.createElement('p');		//まず新しい追加する要素を作成
+p.textContent = campus.address;			  //追加する文章。textContentだからコンソール上でしか表示されない
+let u = document.querySelector('h2#addr');	//ここに上の文章を追加します
+u.insertAdjacentElement('afterend', p);		
+
+
+
+p = document.querySelector('h2#dept'); 		//ここに
+u = document.createElement('ul');			//ul要素を作って
+p.insertAdjacentElement('afterend', u);		//今かuを追加します
+
+for(let n of gakka){
+	l = document.createElement('li');
+	l.textContent = n.name;
+    u.insertAdjacentElement('beforeend', l);
+}
+
+}
+
+let b = document.querySelector('button#show');
+b.addEventListener('click', show);

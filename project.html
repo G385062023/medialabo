@@ -4,8 +4,10 @@
         <meta charset="utf-8">
         <title>project</title>
         <link rel="stylesheet" href="project-html.css">
+
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"></script>
         <script src="weather.js" defer></script>
-        <script src="project.js" defer></script>
     </head>
     <body>
         <h1>
@@ -16,7 +18,8 @@
                 以下の地域に関する情報を検索して表示します
             </p>
         </h2>
-        <p id="ppp">検索キー：<input type="text" name="left" id="left" size="15">  <button id ="botan">検索</button></p>
+        <p id="ppp">検索キー：<input type="text" name="left" id="left" size="15"> <button id="sendRequest">検索</button> </p>
+        
 
     <!-- <div class="ika">
         

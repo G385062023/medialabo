@@ -8,6 +8,7 @@ function sendRequest() {
 	let url = 'https://www.nishita-lab.org/web-contents/jsons/test.json';
 
 	// 通信開始
+	
 	axios.get(url)
 		.then(showResult)
 		.catch(showError)

@@ -1,4 +1,3 @@
-
 // 課題3-2 のプログラムはこの関数の中に記述すること
 function print(data) {
 
@@ -16,6 +15,10 @@ function print(data) {
 
 // 課題5-1 の関数 printDom() はここに記述すること
 function printDom(data) {
+
+  if()
+  let x = document.querySelector('div#result');
+  x.remove()
 
   let div = document.createElement('div');
   div.setAttribute('id', 'result');
@@ -63,17 +66,58 @@ function printDom(data) {
 }
 
 // 課題6-1 のイベントハンドラ登録処理は以下に記述
-
-
-
+let b = document.querySelector('#sendRequest');
+b.addEventListener('click', sendRequest);
 
 // 課題6-1 のイベントハンドラ sendRequest() の定義
 function sendRequest() {
 
+  let a = document.querySelector('input[name = "left"]');
+  let kensaku = a.value;
+
+  let id = 0;
+  if(kensaku == "カイロ" || kensaku == "Cairo" || kensaku == "エジプト"){
+    id = 360630;
+  }if(kensaku == "モスクワ" || kensaku == "Moscow" || kensaku == "ロシア"){
+    id = 524901;
+  }if(kensaku == "ヨハネスブルク" || kensaku == "Johannesburg" || kensaku == "南アフリカ"){
+    id = 993800;
+  }if(kensaku == "北京" || kensaku == "Beijing" || kensaku == "中華人民共和国"){
+    id = 1816670;
+  }if(kensaku == "東京" || kensaku == "Tokyo" || kensaku == "日本"){
+    id = 1850147;
+  }if(kensaku == "シンガポール" || kensaku == "Singapore"){
+    id = 1880252;
+  }if(kensaku == "シドニー" || kensaku == "Sydney" || kensaku == "オーストラリア"){
+    id = 2147714;
+  }if(kensaku == "ロンドン" || kensaku == "London" || kensaku == "イギリス"){
+    id = 2643743;
+  }if(kensaku == "パリ" || kensaku == "Paris" || kensaku == "フランス"){
+    id = 2968815;
+  }if(kensaku == "リオデジャネイロ" || kensaku == "Rio de Janeiro" || kensaku == "ブラジル"){
+    id = 3451189;
+  }if(kensaku == "ニューヨーク" || kensaku == "New York" || kensaku == "アメリカ合衆国"){
+    id = 5128581;
+  }if(kensaku == "ロサンゼルス" || kensaku == "Los Angeles" || kensaku == "アメリカ合衆国"){
+    id = 5368361;
+  }
+
+  let url = 'https://www.nishita-lab.org/web-contents/jsons/openweather/'+id+'.json';
+
+    axios.get(url)
+    .then(showResult)
+    .catch(showError)
+    .then(finish);
 }
 
 // 課題6-1: 通信が成功した時の処理は以下に記述
 function showResult(resp) {
+  let data = resp.data;
+  if (typeof data === 'string') {
+		data = JSON.parse(data);
+	}
+
+ printDom(data);
 
 }
 

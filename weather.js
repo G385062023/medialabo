@@ -16,7 +16,6 @@ function print(data) {
 // 課題5-1 の関数 printDom() はここに記述すること
 function printDom(data) {
 
-  if()
   let x = document.querySelector('div#result');
   x.remove()
 
